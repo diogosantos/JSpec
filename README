@@ -1,0 +1,20 @@
+What would it be if RSpec were originally written in Java?
+
+I think that would be like this...
+
+Given I have a class called User and I want to write its specification in Java, so I write:
+
+describe( User.class );
+add( new Spec( "it should have a name" ) {
+	public void doIt() {
+		User user = new User();
+		user.name = "Diogo";
+
+		should( user.name.equals( "Diogo" ) );
+	}
+} );
+
+The code above should produce something like this: 
+
+User specifications:
+	it should have a name... ok!	
